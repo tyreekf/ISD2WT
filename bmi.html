@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculate BMI</title>
+        <link rel="icon" type="image/x-icon" href="images/logo.jpg">
+        <script src="js/myBMI.JS"></script>
+        <script src="js/topnav.js"></script>
+        <script src="js/logout.js"></script>
+        
+
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link rel="stylesheet" href="bmi.css">
+      
+    
+    </head>
+    
+    <body>
+      
+      <div class="bg-img">
+        <div class="logo"> 
+       <a href="index.html"><img src="images/logo.jpg" alt="tf" >
+      </div> </a>
+          <div class="container">
+        
+          </div>
+        </div>
+    
+  
+        <div class="topnav" id="myTopnav">
+          <a href="dashboard.html" class="active">Home</a>
+          <a href="membership.html">Membership</a>
+          
+          <div class="dropdown">
+            <button class="dropbtn">Fitness
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="workouts.html">Workouts</a>
+              <a href="equipment.html">Equipment</a>
+              <a href="bmi.html">Calculate BMI</a>
+            </div>
+          
+          </div> 
+          
+          
+          <a href="contactus.html">Contact</a>
+          
+          <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+          
+          <div class="dropdown">
+            <button class="dropbtn">Account
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="index.html" value = "Alert" onclick="demoA()">Logout</a>
+              <a href="adminLog.html">Switch to Admin</a>
+             
+              
+            </div>
+            
+          </div>
+          <input type="search" name="search" placeholder="Search..">
+          </div>
+  
+  <span id="clock"></span>
+  
+  
+  <h4>Logged in as : User </h4>
+
+    <div class = "bmi">
+    <h1>Calculate Your BMI </h1>
+    <fieldset>
+      <h3>Enter Weight(KG)</h3>
+    
+    <input type="text" name = "bmi" id="w" placeholder = "66" autofocus><br>
+    
+    <h3>Enter Height (CM) </h3>
+    <input type="text" name="bmi" id="h"  placeholder = "1.87"><br>
+    
+    <button onclick="myBMI()">Calculate BMI</button>
+    
+    <p>Your BMI is:</p> <p id="result"></p>
+    
+    </fieldset>
+  </div>
+
+  <div class="whatisbmi">
+<h1>What is a BMI ? </h1>
+<p>Body Mass Index (BMI) is a person’s weight in kilograms divided by the square of height in meters.
+  <br> A high BMI can indicate high body fatness.
+  <br> BMI screens for weight categories that may lead to health problems, but it does not diagnose the body fatness or health of an individual.</p>
+</div>
+  
+<footer>
+  <p>K00262980</p>
+  
+  <p id="demo"></p>
+
+  
+</footer>
+
+
+
+
+  <script>
+
+function displayTime() {
+    let clock = document.querySelector("#clock"); 
+    let now = new Date();                         
+    clock.textContent = now.toLocaleTimeString(); 
+}
+displayTime()                    
+setInterval(displayTime, 1000);  
+
+</script>
+
+<script>
+  const d = new Date();
+  document.getElementById("demo").innerHTML = d.toDateString();
+  </script>
+
+
+    </body>
+    </html>
+                        
+                    
+    
+    
+    
+    
