@@ -1,0 +1,3 @@
+function UserUpdated() {
+    alert("Updated !");
+  }
