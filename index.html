@@ -1,0 +1,204 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TF Fitness</title>
+<link rel="icon" type="image/x-icon" href="images/logo.jpg">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+<link rel="stylesheet" href="index.css">
+
+<script src="js/topnav.js"></script>
+<script src="js/slideshow.js"></script>
+<script src="js/read.js"></script>
+<script src="js/read2.js"></script>
+<script src="js/read3.js"></script>
+<script src="js/top.js"></script>
+
+</head>
+
+<body>
+
+  <button onclick="topFunction()" id="myTop" title="Go to top">Top</button>
+
+  <div class="bg-img">
+      <div class="logo"> 
+     <a href="index.html"><img src="images/logo.jpg" alt="tf" >
+    </div> </a>
+        <div class="container">
+      
+        </div>
+      </div>
+  
+
+<div class="topnav" id="myTopnav">
+<a href="index.html" class="active" >Home</a>
+
+<div class="dropdown">
+  <button class="dropbtn">Fitness
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content">
+    <a href="login.html">Exercises</a>
+    <a href="login.html">Equipment</a>
+    <a href="login.html">Calculate BMI</a>
+  </div>
+
+</div> 
+
+
+<a href="login.html">Contact</a>
+
+<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+
+<div class="dropdown">
+  <button class="dropbtn">Account
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content">
+    <a href="register.html">Register</a>
+    <a href="login.html">Login</a>
+    
+  </div>
+  
+</div>
+<input type="text" name="search" placeholder="Search..">
+</div>
+
+<p id = "clock"></p>
+
+<div class="info">
+<h2>TF Fitness</h2>
+<p>Welcome to the TF Fitness page <br> <br>
+
+<p>TF Fitness can be used to accomplish any goal, from improved health to weight loss to better performance.<br><br>
+The program works for people who are just starting out and people who have trained for years. <br><br> 
+Make sure to check below for what we have to offer</p><br>
+
+</div>
+
+
+
+<div class="imgText">
+  <img src="images/membership.jpg" alt="Notebook" style="width:100%;">
+  <div class="content">
+    <h1>Purchase a membership or 1 month free trial </h1>
+    <p>Register and sign in now to purchase a membership <br> See exclusive deals we have available to get you towards your goals
+    <span id="dots">...</span><span id="more"> <br> Our team at TF Fitness want to help you reach your goals either its from our help here at the gym or home workouts for yourself ,
+       we work with our clients to make sure we can get the best meal and fitness plan <br> Our 1 month trial is now available to first time users</span></p>
+    <button onclick="myRead()" id="myBtn">Read more</button>
+
+  </div>
+</div>
+
+<div class="imgText2">
+  <img src="images/equipment.jpg" alt="Notebook" style="width:100%;">
+  <div class="content">
+    <h1>Equipment For Sale !</h1>
+    <p>Register and sign up to purchase our equipment
+       <span id="dots2">...</span><span id="more2"> <br> We here at TF Fitness know it can be hard for some people to make it to our gym <br>
+        thats why we are constanly having sales here at TF Fitness for our equipment ranging from treadmils to dumbbells so make sure you are signed up as member to get a even bigger discount !</span></p>
+    <button onclick="myRead2()" id="myBtn2">Read more</button> 
+  </div>
+</div>
+
+<div class="imgText3">
+  <img src="images/bworkout.jpg" alt="Notebook" style="width:100%;">
+  <div class="content">
+    <h1> Try Our Workouts ! </h1>
+    <p> Along with equipment and plans we have workouts available to all our members 
+    <span id="dots3">...</span><span id="more3"> <br> Limited to non membership owners we have exercises depending on your goals 
+      <br> That can range from cardio exercises which is good for people looking for mainly weight loss or Resistance exercise which is weight loss beineficial but looks to build muscle in the process 
+      <br> So make sure to check it in the Fitness Section </span></p>
+    <button onclick="myRead3()" id="myBtn3">Read more</button>
+
+  </div>
+</div>
+
+<div class="slideshow-container">
+
+  <h1>Our Gallery</h1>
+
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="images/exercisecommunity.png" style="width:100%">
+   
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="images/exercise2.jpg" style="width:100%">
+    
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="images/slideshow3.jpg" style="width:100%">
+    
+  </div>
+  
+  </div>
+
+  <br>
+  
+  <div style="text-align:center">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+  </div>
+
+
+<footer>
+  <p>K00262980</p>
+  
+  <p id="demo"></p>
+ 
+
+  
+</footer>
+
+
+
+
+  <script>
+
+function displayTime() {
+    let clock = document.querySelector("#clock"); 
+    let now = new Date();                         
+    clock.textContent = now.toLocaleTimeString(); 
+}
+displayTime()                    
+setInterval(displayTime, 1000);  
+
+</script>
+
+<script>
+  const d = new Date();
+  document.getElementById("demo").innerHTML = d.toDateString();
+  </script>
+
+<script>
+  var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 4000); 
+}
+</script>
+
+
+
+</body>
+</html>
