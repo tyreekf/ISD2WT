@@ -1,0 +1,128 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact</title>
+<link rel="icon" type="image/x-icon" href="images/logo.jpg">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+<link rel="stylesheet" href="contactus.css">
+<script src="js/topnav.js"></script>
+<script src="js/logout.js"></script>
+<script src="js/contact.js"></script>
+
+
+
+</head>
+<body>
+
+    <div class="bg-img">
+        <div class="logo"> 
+       <a href="dashboard.html"><img src="images/logo.jpg" alt="tf" >
+      </div> </a>
+          <div class="container">
+        
+          </div>
+        </div>
+    
+        <div class="topnav" id="myTopnav">
+          <a href="dashboard.html" class="active">Home</a>
+          <a href="membership.html">Membership</a>
+          
+          <div class="dropdown">
+            <button class="dropbtn">Fitness
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="exercise.html">Exercise</a>
+              <a href="equipment.html">Equipment</a>
+              <a href="bmi.html">Calculate BMI</a>
+            </div>
+          
+          </div> 
+          
+          
+          <a href="contactus.html">Contact</a>
+          
+          <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+          
+          <div class="dropdown">
+            <button class="dropbtn">Account
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="index.html" value = "Alert" onclick="demoA()">Logout</a>
+              <a href="adminLog.html">Switch to Admin</a>
+             
+              
+            </div>
+            
+          </div>
+          <input type="search" name="search" placeholder="Search..">
+          </div>
+          
+          
+  
+          <span id="clock"></span> 
+
+          <h4>Logged in as : User</h4>
+
+<div class="contactus">
+  <div style="text-align:center">
+    <h2>Contact Us</h2>
+    
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="images/contactus.jpg" style="width:100%">
+    </div>
+    <div class="column">
+      <form action="dashboard.html">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" autofocus placeholder="Your name.." required>
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="ireland">Ireland</option>
+          <option value="engalnd">Engalnd</option>
+          <option value="scotland">Scotland</option>
+          <option value="wales">Wales</option>
+
+        </select>
+        <label for="subject">Subject (Optional) </label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        <input type="submit" onclick="Contact()" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>K00262980</p>
+  
+  <p id="demo"></p>
+
+  
+</footer>
+
+
+
+
+  <script>
+
+function displayTime() {
+    let clock = document.querySelector("#clock"); 
+    let now = new Date();                         
+    clock.textContent = now.toLocaleTimeString(); 
+}
+displayTime()                    
+setInterval(displayTime, 1000);  
+
+</script>
+
+<script>
+  const d = new Date();
+  document.getElementById("demo").innerHTML = d.toDateString();
+  </script>
+
+</body>
+</html>
