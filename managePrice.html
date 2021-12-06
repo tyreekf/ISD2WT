@@ -1,0 +1,117 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.jpg">
+    <link rel="stylesheet" href="manage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+<script src="js/topnav.js"></script>
+<script src="js/filter.js"></script>
+<script src="js/confirmAdd.js"></script>
+<script src="js/logout.js"></script>
+
+
+</head>
+<body>
+
+    <div class="bg-img">
+      <div class="logo"> 
+     <a href="admin.html"><img src="images/logo.jpg" alt="tf" >
+    </div> </a>
+        <div class="container">
+      
+        </div>
+      </div>
+  
+      <div class="topnav" id="myTopnav">
+        <a href="admin.html" class="active">Home</a>
+        
+        
+        <div class="dropdown">
+          <button class="dropbtn">Manage
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="manageExercise.html">Exercises</a>
+            <a href="manageEquipment.html">Equipment</a>
+            <a href="manageMem.html">Members</a>
+            <a href="managePrice.html">Membership Price</a>
+          </div>
+        
+        </div> 
+        
+        
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+        
+        <div class="dropdown">
+          <button class="dropbtn">Account
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="index.html" value = "Alert" onclick="demoA()">Logout</a>
+          <a href="login.html">Switch back to User</a>
+            
+            
+          </div>
+         
+        </div>
+        <input type="search" name="search" placeholder="Search..">
+      </div>
+
+          
+<span id="clock"></span> 
+
+<h4>Logged in as : Admin </h4>
+
+<div class = "memberinfo">
+<h2>Membership Prices</h2>
+<p>Click into a membership to edit/delete or <a href="">Add</a></button></p>
+</div>
+
+
+
+
+
+<input type="text" id="myInput" onkeyup="myFilter()" placeholder="Search for names.." title="Type in a name">
+
+<ul id="myUL">
+  <li><a href="formPrice.html">Basic</a></li> 
+  <li><a href="">Pro</a></li> 
+  <li><a href="">Premium</a></li> 
+
+ 
+</ul>
+
+
+
+    
+      <footer>
+        <p>K00262980</p>
+       
+        <p id="demo"></p>
+      
+        
+      </footer>
+      
+      
+      
+      
+        <script>
+      
+      function displayTime() {
+          let clock = document.querySelector("#clock"); 
+          let now = new Date();                         
+          clock.textContent = now.toLocaleTimeString(); 
+      }
+      displayTime()                    
+      setInterval(displayTime, 1000);  
+      
+      </script>
+      
+      <script>
+        const d = new Date();
+        document.getElementById("demo").innerHTML = d.toDateString();
+        </script> 
+      </body>
+      </html>
