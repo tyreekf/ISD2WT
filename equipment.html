@@ -1,0 +1,151 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Equipment</title>
+<link rel="icon" type="image/x-icon" href="images/logo.jpg">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+<link rel="stylesheet" href="equipment.css">
+<script src="js/slideshow.js"></script>
+<script src="js/top.js"></script>
+<script src="js/logout.js"></script>
+<script src="js/clock.js"></script>
+<script src="js/topnav.js"></script>
+
+</head>
+
+<body>
+
+  <button onclick="topFunction()" id="myTop" title="Go to top">Top</button>
+
+    <div class="bg-img">
+        <div class="logo"> 
+       <a href="dashboard.html"><img src="images/logo.jpg" alt="tf" >
+      </div> </a>
+          <div class="container">
+        
+          </div>
+        </div>
+    
+  
+        <div class="topnav" id="myTopnav">
+          <a href="dashboard.html" class="active">Home</a>
+          <a href="membership.html">Membership</a>
+          
+          <div class="dropdown">
+            <button class="dropbtn">Fitness
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="exercise.html">Exercise</a>
+              <a href="equipment.html">Equipment</a>
+              <a href="bmi.html">Calculate BMI</a>
+            </div>
+          
+          </div> 
+          
+          
+          <a href="contactus.html">Contact</a>
+          
+          <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+          
+          <div class="dropdown">
+            <button class="dropbtn">Account
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="index.html" value = "Alert" onclick="demoA()">Logout</a>
+              <a href="adminLog.html">Switch to Admin</a>
+             
+              
+            </div>
+            
+          </div>
+          <input type="search" name="search" placeholder="Search..">
+          </div>
+
+  <span id="clock"></span>
+
+  
+
+
+
+    <h4>Logged in as : User</h4>
+
+
+<h1>Equipment</h1>
+
+<div class="card">
+  <img src="images/treadmill.jpg" alt="treadmill" style="width:100%">
+  <h1>Treadmill</h1>
+  <p class="price">€109.99</p>
+  <p><button>Add to Cart</button></p>
+</div>
+
+<div class="card">
+  <img src="images/dumbbells.png" alt="dumbbells" style="width:100%">
+  <h1>Dumbbells</h1>
+  <p class="price">€19.99 - €89.99</p>
+  <p><button>Add to Cart</button></p>
+</div>
+
+<div class="card">
+  <img src="images/squatrack.jpg" alt="squatrack" style="width:100%">
+  <h1>Squat Rack</h1>
+  <p class="price">€199.99</p>
+  <p><button>Add to Cart</button></p>
+</div>
+
+
+
+
+  <footer>
+    <p>K00262980</p>
+   
+    <p id="demo"></p>
+  
+  </footer>
+
+  
+  <script>
+
+    function displayTime() {
+        let clock = document.querySelector("#clock"); 
+        let now = new Date();                         
+        clock.textContent = now.toLocaleTimeString(); 
+    }
+    displayTime()                    
+    setInterval(displayTime, 1000);  
+    
+    </script>
+    
+    <script>
+      const d = new Date();
+      document.getElementById("demo").innerHTML = d.toDateString();
+
+      </script>
+    
+    <script>
+      var slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 4000); 
+    }
+    </script>
+
+</body>
+</html>
