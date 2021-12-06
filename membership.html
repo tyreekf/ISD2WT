@@ -1,0 +1,135 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Membership</title>
+<link rel="icon" type="image/x-icon" href="images/logo.jpg">
+<link rel="stylesheet" href="membership.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+<script src="js/topnav.js"></script>
+<script src="js/logout.js"></script>
+
+
+</head>
+<body>
+    <div class="bg-img">
+        <div class="logo"> 
+       <a href="dashboard.html"><img src="images/logo.jpg" alt="tf" >
+      </div> </a>
+          <div class="container">
+        
+          </div>
+        </div>
+    
+        <div class="topnav" id="myTopnav">
+          <a href="dashboard.html" class="active">Home</a>
+          <a href="membership.html">Membership</a>
+          
+          <div class="dropdown">
+            <button class="dropbtn">Fitness
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="exercise.html">Exercises</a>
+              <a href="equipment.html">Equipment</a>
+              <a href="bmi.html">Calculate BMI</a>
+            </div>
+          
+          </div> 
+          
+          
+          <a href="contactus.html">Contact</a>
+          
+          <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+          
+          <div class="dropdown">
+            <button class="dropbtn">Account
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="index.html" value = "Alert" onclick="demoA()">Logout</a>
+              <a href="adminLog.html">Switch to Admin</a>
+             
+              
+            </div>
+            
+          </div>
+          <input type="search" name="search" placeholder="Search..">
+          </div>
+
+          
+<p id = "clock"></p>
+
+    <h4>Logged in as : User</h4>
+
+  
+<h1>Memberships</h1>
+
+
+
+<div class="columns">
+  <ul class="price">
+    <li class="header" style="background-color: burlywood;">Basic</li>
+    <li class="grey">€ 7.00 / month</li>
+    <li>Weekly Exercise Plan</li>
+    <li>Discounts off your next purchase</li>
+    <li>Access to 5 Exercises</li>
+    <li class="grey"><a href="" class="button">Purchase</a></li>
+  </ul>
+</div>
+
+<div class="columns">
+  <ul class="price">
+    <li class="header" style="background-color: silver;">Pro</li>
+    <li class="grey">€ 25.00 / 6 months </li>
+    <li>Weekly Exercise Plan </li>
+    <li>Discount off your next 10 purchases </li>
+    <li>Access to 15 exercises</li>
+    <li class="grey"><a href="" class="button">Purchase</a></li>
+  </ul>
+</div>
+
+<div class="columns">
+  <ul class="price">
+    <li class="header" style="background-color: gold;">Premium</li>
+    <li class="grey">€ 50.00 / year</li>
+    <li>Weekly Exercise Plan</li>
+    <li>Full year Discount Prices </li>
+    <li>Access to all exercises across our website</li>
+    <li class="grey"><a href="" class="button">Purchase</a></li>
+  </ul>
+</div>
+
+
+<footer>
+  
+  <p>K00262980</p>
+  <p id="demo"></p>
+</footer>
+
+  <script>
+
+
+function displayTime() {
+    let clock = document.querySelector("#clock"); 
+    let now = new Date();                         
+    clock.textContent = now.toLocaleTimeString(); 
+        }
+    displayTime()                    
+    setInterval(displayTime, 1000);  
+
+</script>
+
+<script>
+
+
+  const d = new Date();
+  document.getElementById("demo").innerHTML = d.toDateString();
+
+  </script>
+
+
+
+
+
+</body>
+</html>
