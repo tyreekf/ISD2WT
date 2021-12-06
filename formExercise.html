@@ -1,0 +1,156 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Form</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="ProductForm.css">
+    <script src="js/topnav.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="js/userUpdated.js"></script>
+
+
+  
+    </head>
+    
+    <body>
+    
+    
+      <div class="bg-img">
+          <div class="logo"> 
+         <a href="admin.html"><img src="images/logo.jpg" alt="tf" >
+        </div> </a>
+            <div class="container">
+          
+            </div>
+          </div>
+      
+    
+    <div class="topnav" id="myTopnav">
+    <a href="admin.html" class="active">Home</a>
+    
+    
+    <div class="dropdown">
+      <button class="dropbtn">Manage
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="manageExercise.html">Exercise</a>
+        <a href="manageEquipment.html">Equipment</a>
+        <a href="manageMem.html">Members</a>
+        <a href="managePrice.html">Membership</a>
+
+
+       
+      </div>
+    
+    </div> 
+    
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    
+    <div class="dropdown">
+      <button class="dropbtn">Account
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="index.html" value = "Alert" onclick="demoA()">Logout</a>
+      <a href="dashboard.html">Switch back to User</a>
+        
+        
+      </div>
+     
+    </div>
+    <input type="search" name="search" placeholder="Search..">
+    </div>
+    
+    <p id = "clock"></p>
+    
+    
+    
+ 
+      <h4>Logged in as : Admin </h4>
+   
+    
+
+  <form action="manageExercise.html">
+    <div class="reg">
+      <h2>Exercise Details</h2>
+      <p>Click into fields to edit or click delete to remove</p>
+      <hr>
+    
+    <label for="name"><b>Exercise Name </b></label>
+      <input type="text" value="Pushups" name="name" id="name" required>
+    
+      <label for="subject"><b>Instructions</b> </label>
+      <textarea id="subject" name="subject" placeholder = "Enter Description" required style="height:170px"></textarea>
+  
+      <label for="ExerciseNo"><b>Exercise Number</b></label>
+      <input type="text" value="Exercise123" name="exNo" id="exNo" disabled>
+
+      
+  
+      <hr>
+  
+    
+      <button type="submit" onclick="UserUpdated()" class="confirm">Confirm</button>
+      
+
+
+    </div>
+  
+    
+  </form>
+
+  <button onclick="document.getElementById('id01').style.display='block'">Delete</button>
+
+  
+<div id="id01" class="modal">
+    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+    <form class="modal-content" action="manageEquipment.html">
+      <div class="Delecontainer">
+        <h1>Delete Exercise</h1>
+        <p>Are you sure you want to delete this Exercise ? </p>
+      
+        <div class="clearfix">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="deletebtn">Delete</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  
+
+  <footer>
+
+    <p>K00262980</p>
+  
+    <p id="demo"></p>
+   
+
+  </footer>
+  
+  <script>
+
+    function displayTime() {
+        let clock = document.querySelector("#clock"); 
+        let now = new Date();                         
+        clock.textContent = now.toLocaleTimeString(); 
+    }
+    displayTime()                    
+    setInterval(displayTime, 1000);  
+    
+    </script>
+    
+    <script>
+      const d = new Date();
+      document.getElementById("demo").innerHTML = d.toDateString();
+      </script>
+
+     
+
+      
+    
+</body>
+</html>
+  
