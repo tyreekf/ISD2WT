@@ -1,0 +1,157 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Workouts</title>
+<link rel="icon" type="image/x-icon" href="images/logo.jpg">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+<link rel="stylesheet" href="exercise.css">
+<script src="js/logout.js"></script>
+<script src="js/topnav.js"></script>
+<script src="js/top.js"></script>
+
+</head>
+
+
+<body>
+
+    <button onclick="topFunction()" id="myTop" title="Go to top">Top</button>
+
+  <div class="bg-img">
+      <div class="logo"> 
+     <a href="dashboard.html"><img src="images/logo.jpg" alt="tf" >
+    </div> </a>
+        <div class="container">
+      
+        </div>
+      </div>
+  
+
+      <div class="topnav" id="myTopnav">
+        <a href="dashboard.html" class="active">Home</a>
+        <a href="membership.html">Membership</a>
+        
+        <div class="dropdown">
+          <button class="dropbtn">Fitness
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="exercise.html">Exercise</a>
+            <a href="equipment.html">Equipment</a>
+            <a href="bmi.html">Calculate BMI</a>
+          </div>
+        
+        </div> 
+        
+        
+        <a href="contactus.html">Contact</a>
+        
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+        
+        <div class="dropdown">
+          <button class="dropbtn">Account
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="index.html" value = "Alert" onclick="demoA()">Logout</a>
+            <a href="adminLog.html">Switch to Admin</a>
+           
+            
+          </div>
+          
+        </div>
+        <input type="search" name="search" placeholder="Search..">
+        </div>
+
+        <span id="clock"></span> 
+
+
+  <h4>Logged in as : User</h4>
+
+
+
+    <h1>Workouts</h1>
+    <h3>Hover over exercise to see information</h3>
+    
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="images/pushup.jpg" alt="Avatar" style="width:300px;height:300px;">
+        </div>
+        <div class="flip-card-back">
+          <h1>Pushup</h1> 
+          <p>1. With your legs extended back, place the hands below the shoulders, slightly wider than shoulder-width apart.</p>
+            <p>2. Start bending your elbows and lower your chest until it’s just above the floor.</p>
+           <p>3. Push back to the starting position. A 1-second push, 1-second pause, 2-second down count is ideal.</p>
+           <p> 4. Repeat.</p> 
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="images/Lunges.png" alt="Avatar" style="width:300px;height:300px;">
+        </div>
+        <div class="flip-card-back">
+          <h1>Lunge</h1> 
+          <p>1. Stand with your feet hip-width apart, keep your back straight, your shoulders back, and your abs tight.</p>
+          <p> 2. Take a step forward and slowly bend both knees, until your back knee is just above the floor.</p>
+           <p> 3. Stand back up and repeat the movement.</p>
+          <p>  4. Alternate legs until the set is complete.</p> 
+     
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="images/plank.jpg" alt="Avatar" style="width:300px;height:300px;">
+        </div>
+        <div class="flip-card-back">
+          <h1>Plank</h1> 
+          <p>1. Get into a push up position, with your elbows under your shoulders and your feet hip-width apart.</p>
+          <p>2. Bend your elbows and rest your weight on your forearms and on your toes, keeping your body in a straight line.</p>
+          <p>3. Hold for as long as possible.</p>
+          
+        </div>
+      </div>
+    </div>
+
+      
+<footer>
+  <p>K00262980</p>
+  
+  <p id="demo"></p>
+
+  
+</footer>
+
+
+
+
+  <script>
+
+function displayTime() {
+    let clock = document.querySelector("#clock"); 
+    let now = new Date();                         
+    clock.textContent = now.toLocaleTimeString(); 
+}
+displayTime()                    
+setInterval(displayTime, 1000);  
+
+</script>
+
+<script>
+  const d = new Date();
+  document.getElementById("demo").innerHTML = d.toDateString();
+  </script>
+
+
+    </body>
+    </html>
+                        
+                    
+    
